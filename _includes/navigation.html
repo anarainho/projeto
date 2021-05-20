@@ -1,7 +1,10 @@
 <nav>
-<ul>
-    <li><a>About</a></li> <!------- aqui deixar o link para about_me.html -->
-    <li><a>Portfolio</a></li>
-    <li><a>Contacts</a></li>
-</ul>
+    <h1><a href="{{ site.baseurl }}/">Carolina Rainho</a></h1>
+    <ul>
+        {% for navigation in site.data.nav-geral.docs %}
+        <li>
+            <a href="{{ site.baseurl }}/{{ navigation.url }}">{{ navigation.title }}</a>
+        </li> 
+        {% endfor %}
+    </ul>
 </nav>
